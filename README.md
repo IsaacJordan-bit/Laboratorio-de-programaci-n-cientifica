@@ -1,1 +1,1 @@
-# Repositorrio MDS7202 Laboratorio de Programación Científica
+# Repositorio MDS7202 Laboratorio de Programación Científica

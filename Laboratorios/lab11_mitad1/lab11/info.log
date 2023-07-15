@@ -1,0 +1,48 @@
+2023-07-12 19:12:49,173 - kedro.framework.session.session - INFO - Kedro project lab11
+2023-07-12 19:13:12,730 - kedro.framework.session.session - INFO - Kedro project lab11
+2023-07-12 19:13:14,305 - kedro.pipeline.node - INFO - Running node: get_data: get_data(None) -> [companies,shuttles,reviews]
+2023-07-12 19:13:14,744 - kedro.pipeline.node - ERROR - Node 'get_data: get_data(None) -> [companies,shuttles,reviews]' failed with error: 
+HTTP Error 404: Not Found
+2023-07-12 19:13:14,757 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-07-12 19:21:23,050 - kedro.framework.session.session - INFO - Kedro project lab11
+2023-07-12 19:21:24,530 - kedro.pipeline.node - INFO - Running node: get_data: get_data(None) -> [companies,shuttles,reviews]
+2023-07-12 19:21:25,372 - kedro.pipeline.node - ERROR - Node 'get_data: get_data(None) -> [companies,shuttles,reviews]' failed with error: 
+Error tokenizing data. C error: Expected 1 fields in line 31, saw 5
+
+2023-07-12 19:21:25,389 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-07-12 19:36:45,056 - kedro.framework.session.session - INFO - Kedro project lab11
+2023-07-12 19:36:47,251 - kedro.pipeline.node - INFO - Running node: get_data: get_data(None) -> [companies,shuttles,reviews]
+2023-07-12 19:36:49,619 - kedro.pipeline.node - ERROR - Node 'get_data: get_data(None) -> [companies,shuttles,reviews]' failed with error: 
+Excel file format cannot be determined, you must specify an engine manually.
+2023-07-12 19:36:49,628 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-07-12 19:38:46,383 - kedro.framework.session.session - INFO - Kedro project lab11
+2023-07-12 19:38:47,830 - kedro.pipeline.node - INFO - Running node: get_data: get_data(None) -> [companies,shuttles,reviews]
+2023-07-12 19:38:49,768 - kedro.pipeline.node - ERROR - Node 'get_data: get_data(None) -> [companies,shuttles,reviews]' failed with error: 
+File is not a zip file
+2023-07-12 19:38:49,784 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-07-12 19:41:52,551 - kedro.framework.session.session - INFO - Kedro project lab11
+2023-07-12 19:41:54,563 - kedro.pipeline.node - INFO - Running node: get_data: get_data(None) -> [companies,shuttles,reviews]
+2023-07-12 19:41:56,923 - kedro.pipeline.node - ERROR - Node 'get_data: get_data(None) -> [companies,shuttles,reviews]' failed with error: 
+File is not a zip file
+2023-07-12 19:41:56,939 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-07-12 19:44:25,043 - kedro.framework.session.session - INFO - Kedro project lab11
+2023-07-12 19:44:26,863 - kedro.pipeline.node - INFO - Running node: get_data: get_data(None) -> [companies,shuttles,reviews]
+2023-07-12 19:45:30,539 - kedro.io.data_catalog - INFO - Saving data to 'companies' (CSVDataSet)...
+2023-07-12 19:45:30,851 - kedro.io.data_catalog - INFO - Saving data to 'shuttles' (ExcelDataSet)...
+2023-07-12 19:46:46,842 - kedro.io.data_catalog - INFO - Saving data to 'reviews' (CSVDataSet)...
+2023-07-12 19:46:47,684 - kedro.runner.sequential_runner - INFO - Completed 1 out of 4 tasks
+2023-07-12 19:46:47,694 - kedro.io.data_catalog - INFO - Loading data from 'companies' (CSVDataSet)...
+2023-07-12 19:46:48,048 - kedro.pipeline.node - INFO - Running node: preprocess_companies: preprocess_companies([companies]) -> [preprocessed_companies]
+2023-07-12 19:46:48,180 - kedro.io.data_catalog - INFO - Saving data to 'preprocessed_companies' (ParquetDataSet)...
+2023-07-12 19:46:48,534 - kedro.runner.sequential_runner - INFO - Completed 2 out of 4 tasks
+2023-07-12 19:46:48,540 - kedro.io.data_catalog - INFO - Loading data from 'shuttles' (ExcelDataSet)...
+2023-07-12 19:47:54,414 - kedro.pipeline.node - INFO - Running node: preprocess_shuttles: preprocess_shuttles([shuttles]) -> [preprocessed_shuttles]
+2023-07-12 19:47:54,811 - kedro.io.data_catalog - INFO - Saving data to 'preprocessed_shuttles' (ParquetDataSet)...
+2023-07-12 19:47:55,191 - kedro.runner.sequential_runner - INFO - Completed 3 out of 4 tasks
+2023-07-12 19:47:55,200 - kedro.io.data_catalog - INFO - Loading data from 'preprocessed_shuttles' (ParquetDataSet)...
+2023-07-12 19:47:55,586 - kedro.io.data_catalog - INFO - Loading data from 'preprocessed_companies' (ParquetDataSet)...
+2023-07-12 19:47:55,653 - kedro.io.data_catalog - INFO - Loading data from 'reviews' (CSVDataSet)...
+2023-07-12 19:47:56,022 - kedro.pipeline.node - INFO - Running node: create_model_input_table: create_model_input_table([preprocessed_shuttles,preprocessed_companies,reviews]) -> [model_input_table]
+2023-07-12 19:47:57,882 - kedro.io.data_catalog - INFO - Saving data to 'model_input_table' (ParquetDataSet)...
+2023-07-12 19:47:57,957 - kedro.runner.sequential_runner - INFO - Completed 4 out of 4 tasks
+2023-07-12 19:47:57,961 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
